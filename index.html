@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kwantok</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen" style="text-align:center; margin-top: 100px; display: none;">
+  <h2>Bem-vindo!</h2>
+  <input type="text" id="nome-usuario" placeholder="Digite seu nome" />
+  <br><br>
+  <button onclick="fazerLogin()">Entrar</button>
+</div>
+    <button onclick="mostrarAba('perfil')">Perfil</button>
+
+  <div class="feed-container" id="feed">
+    <!-- Vídeos serão carregados aqui -->
+  </div>
+  <!-- Aba Perfil -->
+<div id="perfil" class="aba" style="display: none;">
+  <h2>Meu Perfil</h2>
+  <p><strong>Nome:</strong> <span id="perfil-nome"></span></p>
+  <p><strong>Vídeos enviados:</strong> <span id="perfil-videos"></span></p>
+  <p><strong>Total de curtidas recebidas:</strong> <span id="perfil-curtidas"></span></p>
+  <br>
+  <button onclick="logout()">Sair da conta</button>
+</div>
+
+  <input type="file" accept="video/*" id="upload-video" style="display:none;">
+<label class="upload-btn" for="upload-video">📤 Enviar Vídeo</label>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
